@@ -37,7 +37,7 @@ public String addStudent ( @RequestBody Student student){
 
 @GetMapping("/student/{id}")
     public Student getstudent(@PathVariable String email){
-       return StudentService.getStudent(email);
+       return studentService.getStudent(email);
 }
 
 }
