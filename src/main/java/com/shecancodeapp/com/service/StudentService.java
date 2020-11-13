@@ -10,8 +10,8 @@ import java.util.List;
 @Service
 public class StudentService {
     private List<Student>students = new ArrayList<>( Arrays.asList(
-          new Student(1, "John Doe", "johndoe@gmail.com","Male",
-                  "Gasabo",123443,
+          new Student("1", "John Doe", "johndoe@gmail.com","Male",
+                  "Gasabo","123443",
                   "Kimironko","Facebook",
                   "In-Person","Yes","Yes",
                   "Yes","yes","Add paragraph here","Add paragraph here")
@@ -19,11 +19,6 @@ public class StudentService {
 
 //
     ));
-
-    public Student getStudent(String email) {
-        return students.stream().filter(student ->
-                student.getEmail().equals(email)).findFirst().get();
-    }
 
     public List<Student> getAllStudent(){
          return students;
@@ -34,6 +29,20 @@ public class StudentService {
       return "Student has been added successfully";
 
 
+    }
+
+    public Student findStudent(String id) {
+        return students.stream().filter(student ->
+                student.getId().equals(id)).findFirst().get();
+    }
+
+    public void chageData(String id,Student student ) {
+        for (int i =0; i<students.size();i++){
+            Student st =students.get(i);
+            if (st.getId().equals(id)){
+                students.set(i,student);
+            }
+        }
     }
 
 }

@@ -2,12 +2,12 @@ package com.shecancodeapp.com.students;
 
 
 public class Student {
-    private int id;
+    private String id;
     private String name;
     private String email;
     private String gender;
     private String district;
-    private  int phoneNumber;
+    private String phoneNumber;
     private String location;
     private String howdidyouhearaboutus;
     private String inpersonoronline;
@@ -22,15 +22,15 @@ public class Student {
     public Student() {
     }
 
-    public Student(int id, String name, String email, String gender,String district,
-                   int phoneNumber,String location, String howdidyouhearaboutus,
+    public Student(String id, String name, String email, String gender,String district,
+                   String phoneNumber,String location, String howdidyouhearaboutus,
                    String inpersonoronline,String programFee,
                    String registrationFee,String ownAlaptop,String accessToInternet,
                    String scholarship,String careerGoals ) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.email = gender;
+        this.gender = gender;
         this.district = district;
         this.phoneNumber =phoneNumber;
         this.location =location;
@@ -46,7 +46,7 @@ public class Student {
 
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -66,7 +66,7 @@ public class Student {
         this.email = email;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -107,7 +107,7 @@ public class Student {
     }
 
     //    gets
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -127,7 +127,7 @@ public class Student {
         return district;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
