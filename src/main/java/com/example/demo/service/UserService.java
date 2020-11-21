@@ -15,4 +15,10 @@ public class UserService {
         return ("Account created was successful") ;
     }
 
+    public String login(){
+        userRepository.findAll();
+        userRepository.toString();
+        return("Signed-In");
+    }
+
 }

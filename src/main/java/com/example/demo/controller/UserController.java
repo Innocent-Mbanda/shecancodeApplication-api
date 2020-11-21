@@ -15,12 +15,15 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/auth/create-account")
+    @PostMapping("/auth/signUp")
     public String CreateUser(@RequestBody User user){
       return  userService.createAccount(user);
 
     }
-    @PostMapping("/")
+    @PostMapping("/sigIn")
+    public String Signing(@RequestBody User user){
+        return userService.login();
+    }
 
 
 
