@@ -6,10 +6,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class User {
     @Id
-    String name;
-    String email;
-    String password;
-    String id;
+    private String name;
+    private String email;
+    private String password;
+    private String id;
 
     public User(){
 
