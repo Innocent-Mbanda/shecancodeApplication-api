@@ -28,7 +28,7 @@ public class StudentController {
     }
 
     //@RequestMapping(method = RequestMethod.POST,value = "/student/add")
-    @PostMapping("/student/add")
+    @PostMapping("/students/add")
     public String  addStudent(@RequestBody Student student) {
         return studentService.addStudent(student);
 
@@ -40,7 +40,7 @@ public class StudentController {
 
     }
 
-    @PutMapping("/student")
+    @PutMapping("/students")
     public void changeData(@RequestBody Student student){
         studentService.chageData(student);
     }
