@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.controllers;
 
 
 import com.example.demo.document.Student;
@@ -11,8 +11,8 @@ import java.util.Optional;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class StudentController {
-  @Autowired
-  private StudentService  studentService;
+    @Autowired
+    private StudentService  studentService;
 
 
     //access, function-return-type and functionName)//
@@ -42,6 +42,6 @@ public class StudentController {
 
     @PutMapping("/student")
     public void changeData(@RequestBody Student student){
-         studentService.chageData(student);
+        studentService.chageData(student);
     }
 }

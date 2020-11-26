@@ -16,12 +16,12 @@ public class StudentService {
         this.studentRepository =studentRepository;
     }
     public List<Student> getAllStudent(){
-         return studentRepository.findAll();
+        return studentRepository.findAll();
     }
 
     public String addStudent(Student student) {
-      studentRepository.save(student);
-      return "Student has been added successfully";
+        studentRepository.save(student);
+        return "Student has been added successfully";
 
 
     }
@@ -34,7 +34,7 @@ public class StudentService {
 
     public void chageData(Student student ) {
         System.out.println("your data have changed and saved");
-       studentRepository.save(student);
+        studentRepository.save(student);
     }
 
 }
