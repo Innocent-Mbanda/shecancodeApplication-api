@@ -21,6 +21,7 @@ public class Student {
     private String accessToInternet;
     private String scholarship;
     private String careerGoals;
+    private String education;
 
 
     public Student() {
@@ -30,7 +31,7 @@ public class Student {
                    String phoneNumber, String location, String howdidyouhearaboutus,
                    String inpersonoronline, String programFee,
                    String registrationFee, String ownAlaptop, String accessToInternet,
-                   String scholarship, String careerGoals ) {
+                   String scholarship, String careerGoals,String education ) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -46,6 +47,7 @@ public class Student {
         this.accessToInternet =accessToInternet;
         this.scholarship =scholarship;
         this.careerGoals =careerGoals;
+        this.education = education;
 
 
     }
@@ -110,6 +112,8 @@ public class Student {
         this.careerGoals = careerGoals;
     }
 
+    public void setEducation(String education){this.education =education;}
+
     //    gets
     public String getId() {
         return id;
@@ -170,5 +174,6 @@ public class Student {
     public String getCareerGoals() {
         return careerGoals;
     }
+    public String getEducation(){return education;}
 
 }
